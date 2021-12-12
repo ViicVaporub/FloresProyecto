@@ -1,14 +1,23 @@
 package com.example.floresproyecto;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.floresproyecto.adapter.RecyclerAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+    private RecyclerView rvlista;
+    private RecyclerAdapter adapter;
+    private List<ItemList> items;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Button botoninicio;
@@ -47,5 +56,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        initViews();
+        initValues();
+    }
+
+    private void initViews(){
+        rvlista = findViewById(R.id.rvLista);
+    }
+
+    private void initValues(){
+        LinearLayoutManager manager= new LinearLayoutManager(this);
+        rvlista.setLayoutManager(manager);
+
+        items = getItems();
+        adapter = new RecyclerAdapter(items);
+        rvlista.setAdapter(adapter);
+    }
+
+    private List<ItemList> getItems(){
+        List<ItemList> itemLists = new ArrayList<>();
+        itemLists.add(new ItemList("Rosas","Naturales y poreciosas",R.drawable.call));
+        return itemLists;
     }
 }
