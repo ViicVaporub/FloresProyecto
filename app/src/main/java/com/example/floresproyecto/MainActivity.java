@@ -58,30 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-<<<<<<< Updated upstream
-
-        initViews();
-        initValues();
-    }
-
-    private void initViews(){
-        rvlista = findViewById(R.id.rvLista);
-    }
-
-    private void initValues(){
-        LinearLayoutManager manager= new LinearLayoutManager(this);
-        rvlista.setLayoutManager(manager);
-
-        items = getItems();
-        adapter = new RecyclerAdapter(items);
-        rvlista.setAdapter(adapter);
-    }
-
-    private List<ItemList> getItems(){
-        List<ItemList> itemLists = new ArrayList<>();
-        itemLists.add(new ItemList("Rosas","Naturales y poreciosas",R.drawable.call));
-        return itemLists;
-=======
         botonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +65,29 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
->>>>>>> Stashed changes
+
+
+       // initViews();
+       // initValues();
     }
+
+   // private void initViews(){
+       // rvlista = findViewById(R.id.rvLista);
+   // }
+
+    //private void initValues(){
+        //LinearLayoutManager manager= new LinearLayoutManager(this);
+        //rvlista.setLayoutManager(manager);
+
+       // items = getItems();
+       // adapter = new RecyclerAdapter(items);
+        //rvlista.setAdapter(adapter);
+    //}
+
+    //private List<ItemList> getItems(){
+       // List<ItemList> itemLists = new ArrayList<>();
+       // itemLists.add(new ItemList("Rosas","Naturales y poreciosas",R.drawable.logo));
+       // return itemLists;
+
+   // }
 }
