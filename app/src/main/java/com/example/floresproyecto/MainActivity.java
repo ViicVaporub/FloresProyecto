@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Button botoninicio;
         Button botonabout;
         Button botoncontacto;
+        Button botonlogin;
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         botoninicio=(Button)findViewById(R.id.botoninicio);
         botonabout=(Button)findViewById(R.id.botonabout);
         botoncontacto=(Button)findViewById(R.id.botoncontacto);
+        botonlogin=(Button)findViewById(R.id.botonlogin);
         botoninicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+<<<<<<< Updated upstream
 
         initViews();
         initValues();
@@ -78,5 +81,14 @@ public class MainActivity extends AppCompatActivity {
         List<ItemList> itemLists = new ArrayList<>();
         itemLists.add(new ItemList("Rosas","Naturales y poreciosas",R.drawable.call));
         return itemLists;
+=======
+        botonlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, login.class);
+                startActivity(i);
+            }
+        });
+>>>>>>> Stashed changes
     }
 }
