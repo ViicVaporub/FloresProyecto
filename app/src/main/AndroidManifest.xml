@@ -25,9 +25,6 @@
             android:name=".artificial"
             android:exported="true" />
         <activity
-            android:name=".artifical"
-            android:exported="true" />
-        <activity
             android:name=".naturalartificial"
             android:exported="true" />
         <activity

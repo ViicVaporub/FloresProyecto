@@ -52,26 +52,26 @@ Button btnCerrar;
 
 
 
-        initViews();
-        initValues();
+        //initViews();
+        //initValues();
     }
-    private void initViews(){
-     rvlista = findViewById(R.id.rvLista);
-     }
+    //private void initViews(){
+     //rvlista = findViewById(R.id.rvLista);
+    // }
 
-    private void initValues(){
-    LinearLayoutManager manager= new LinearLayoutManager(this);
-    rvlista.setLayoutManager(manager);
+    //private void initValues(){
+   // LinearLayoutManager manager= new LinearLayoutManager(this);
+    //rvlista.setLayoutManager(manager);
 
-     items = getItems();
-     adapter = new RecyclerAdapter(items);
-    rvlista.setAdapter(adapter);
-    }
+    // items = getItems();
+     //adapter = new RecyclerAdapter(items);
+   // rvlista.setAdapter(adapter);
+    //}
 
-    private List<ItemList> getItems(){
-     List<ItemList> itemLists = new ArrayList<>();
-     itemLists.add(new ItemList("Rosas","Naturales y preciosas",R.drawable.flor));
-     return itemLists;
+    //private List<ItemList> getItems(){
+     //List<ItemList> itemLists = new ArrayList<>();
+     //itemLists.add(new ItemList("Rosas","Naturales y preciosas",R.drawable.flor));
+     //return itemLists;
 
-    }
+    //}
 }
