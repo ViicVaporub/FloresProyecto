@@ -13,6 +13,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FloresProyecto">
         <activity
+            android:name=".arreglos"
+            android:exported="true" />
+        <activity
+            android:name=".ramos"
+            android:exported="true" />
+        <activity
+            android:name=".ramoarreglo"
+            android:exported="true" />
+        <activity
+            android:name=".artificial"
+            android:exported="true" />
+        <activity
+            android:name=".artifical"
+            android:exported="true" />
+        <activity
+            android:name=".naturalartificial"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
         <activity

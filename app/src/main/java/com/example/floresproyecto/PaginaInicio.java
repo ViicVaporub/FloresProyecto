@@ -58,7 +58,7 @@ Button btnCerrar;
 
     private List<ItemList> getItems(){
      List<ItemList> itemLists = new ArrayList<>();
-     itemLists.add(new ItemList("Rosas","Naturales y poreciosas",R.drawable.flor));
+     itemLists.add(new ItemList("Rosas","Naturales y preciosas",R.drawable.flor));
      return itemLists;
 
     }
