@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".about">
+    tools:context=".about"
+    android:background="@drawable/fondoabout2">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="306dp"
         android:layout_height="76dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         android:gravity="center"
         android:text="Sobre nosotros"
         android:textColor="@color/black"
@@ -25,14 +26,14 @@
         android:id="@+id/textView2"
         android:layout_width="348dp"
         android:layout_height="262dp"
-        android:layout_marginTop="8dp"
         android:justificationMode="inter_word"
         android:text="Somos una tienda local de Aguascalientes que vende todo tipo de flores, para cualquier evento, ya se una fiesta, un adorno o en cualquier tipo de decoracion con flores que quieras poner "
         android:textColor="@color/black"
         android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
