@@ -13,7 +13,8 @@
         android:text="TiendaDeFloresProyecto@gmail.com"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        android:layout_gravity="center"/>
     <EditText
         android:id="@+id/mail2"
         android:layout_width="match_parent"
