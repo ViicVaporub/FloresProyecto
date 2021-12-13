@@ -34,15 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/botoninicio"
-            android:layout_width="200dp"
-            android:layout_height="50dp"
 
-            android:background="@drawable/diseno_boton"
-            android:gravity="center"
-            android:text="Catalogo"
-            android:textSize="20dp" />
 
         <Button
             android:id="@+id/botonabout"
