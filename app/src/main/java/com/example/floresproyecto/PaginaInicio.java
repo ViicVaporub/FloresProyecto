@@ -17,61 +17,63 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PaginaInicio extends AppCompatActivity {
-Button btnCerrar;
+    Button btnCerrar;
     private RecyclerView rvlista;
     private RecyclerAdapter adapter;
     private List<ItemList> items;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Button btnCatalogo;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagina_inicio);
-        btnCerrar=findViewById(R.id.btnCerrar);
+        btnCerrar = findViewById(R.id.btnCerrar);
 
 
         btnCerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences preferences=getSharedPreferences("preferenciasLogin", Context.MODE_PRIVATE);
+                SharedPreferences preferences = getSharedPreferences("preferenciasLogin", Context.MODE_PRIVATE);
                 preferences.edit().clear().commit();
 
-                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
-        btnCatalogo = (Button) findViewById(R.id.btnCatalago);{
+        btnCatalogo = (Button) findViewById(R.id.btnCatalago);
+        {
             btnCatalogo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(PaginaInicio.this, naturalartificial.class);
                     startActivity(i);
+
                 }
             });
         }
 
 
-
-        initViews();
-        initValues();
+        //initViews();
+        // initValues();
     }
-    private void initViews(){
-     rvlista = findViewById(R.id.rvLista);
-     }
+    //private void initViews(){
+    //rvlista = findViewById(R.id.rvLista);
+    //}
 
-    private void initValues(){
-   LinearLayoutManager manager= new LinearLayoutManager(this);
-    rvlista.setLayoutManager(manager);
+    //private void initValues(){
+    //LinearLayoutManager manager= new LinearLayoutManager(this);
+    //rvlista.setLayoutManager(manager);
 
-     items = getItems();
-     adapter = new RecyclerAdapter(items);
-    rvlista.setAdapter(adapter);
-    }
+    //items = getItems();
+    // adapter = new RecyclerAdapter(items);
+    // rvlista.setAdapter(adapter);
+    //}
 
-    private List<ItemList> getItems(){
-     List<ItemList> itemLists = new ArrayList<>();
-     itemLists.add(new ItemList("Rosas","Naturales y preciosas",R.drawable.flor));
-     return itemLists;
+    // private List<ItemList> getItems(){
+    // List<ItemList> itemLists = new ArrayList<>();
+    //itemLists.add(new ItemList("Rosas","Naturales y preciosas",R.drawable.flor));
+    //return itemLists;
 
-    }
+    //}
 }

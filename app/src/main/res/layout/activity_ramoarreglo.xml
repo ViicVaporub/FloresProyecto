@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#E7B9EF"
-    tools:context=".login">
+    tools:context=".ramoarreglo">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -19,6 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="ramos"
             android:orientation="vertical">
 
             <ImageView
@@ -39,6 +40,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="arreglos"
             android:orientation="vertical">
 
             <ImageView
