@@ -23,9 +23,11 @@ Button btnCerrar;
     private List<ItemList> items;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Button btnCatalogo;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagina_inicio);
         btnCerrar=findViewById(R.id.btnCerrar);
+
 
         btnCerrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +40,16 @@ Button btnCerrar;
                 finish();
             }
         });
+        btnCatalogo = (Button) findViewById(R.id.btnCatalago);{
+            btnCatalogo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(PaginaInicio.this, naturalartificial.class);
+                    startActivity(i);
+                }
+            });
+        }
+
 
 
         initViews();
