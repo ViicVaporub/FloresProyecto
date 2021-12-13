@@ -4,7 +4,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -32,6 +34,7 @@ String url="https://rczqevij.lucusvirtual.es/login.php";
 
         t_email=findViewById(R.id.txttemail);
         t_pass=findViewById(R.id.txtpass);
+        recuperarPreferencias();
     }
 
     public void login(View view){
@@ -55,7 +58,9 @@ String url="https://rczqevij.lucusvirtual.es/login.php";
                     if (response.equalsIgnoreCase("ingreso correctamente")) {
                         t_email.setText("");
                         t_pass.setText("");
+                        guardarPreferencias();
                         startActivity(new Intent(getApplicationContext(), PaginaInicio.class));
+                        finish();
                     } else {
                         Toast.makeText(login.this, response, Toast.LENGTH_SHORT).show();
                     }
@@ -84,5 +89,20 @@ String url="https://rczqevij.lucusvirtual.es/login.php";
     public void registro(View view){
         startActivity(new Intent(getApplicationContext(),registro.class));
         finish();
+    }
+
+    private void guardarPreferencias(){
+        SharedPreferences preferences=getSharedPreferences("preferenciasLogin", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=preferences.edit();
+        editor.putString("email",str_email);
+        editor.putString("password",str_pass);
+        editor.putBoolean("sesion", true);
+        editor.commit();
+    }
+
+    private void recuperarPreferencias(){
+        SharedPreferences preferences=getSharedPreferences("preferenciasLogin",Context.MODE_PRIVATE);
+        t_email.setText(preferences.getString("email","micorreo@gmail.com"));
+        t_pass.setText(preferences.getString("password","123456"));
     }
 }
