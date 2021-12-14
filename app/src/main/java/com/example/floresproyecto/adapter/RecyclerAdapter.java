@@ -33,6 +33,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         holder.imgItem.setImageResource(item.getImgResource());
         holder.tvTitulo.setText(item.getTitulo());
         holder.tvDescripcion.setText(item.getDescripcion());
+        holder.tvCodigo.setText(item.getCodigo());
     }
 
     @Override
@@ -44,12 +45,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Recycl
         private ImageView imgItem;
         private TextView tvTitulo;
         private TextView tvDescripcion;
+        private TextView tvCodigo;
 
         public RecyclerHolder(@NonNull View itemView){
             super(itemView);
             imgItem = itemView.findViewById(R.id.imgItem);
             tvTitulo = itemView.findViewById(R.id.tvTitulo);
             tvDescripcion = itemView.findViewById(R.id.tvDescripcion);
+            tvCodigo = itemView.findViewById(R.id.tvCodigo);
         }
     }
 }
