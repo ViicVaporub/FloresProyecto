@@ -25,7 +25,7 @@ public class whatsaap extends AppCompatActivity {
         setContentView(R.layout.activity_whatsaap);
 
 
-        
+
         btnwts=findViewById(R.id.btnwts);
 
         btnwts.setOnClickListener(new View.OnClickListener() {
