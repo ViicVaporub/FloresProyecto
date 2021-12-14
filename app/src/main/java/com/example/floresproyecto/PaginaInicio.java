@@ -18,9 +18,6 @@ import java.util.List;
 
 public class PaginaInicio extends AppCompatActivity {
     Button btnCerrar;
-    private RecyclerView rvlista;
-    private RecyclerAdapter adapter;
-    private List<ItemList> items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,26 +51,7 @@ public class PaginaInicio extends AppCompatActivity {
         }
 
 
-        //initViews();
-        // initValues();
+
     }
-    //private void initViews(){
-    //rvlista = findViewById(R.id.rvLista);
-    //}
 
-    //private void initValues(){
-    //LinearLayoutManager manager= new LinearLayoutManager(this);
-    //rvlista.setLayoutManager(manager);
-
-    //items = getItems();
-    // adapter = new RecyclerAdapter(items);
-    // rvlista.setAdapter(adapter);
-    //}
-
-    // private List<ItemList> getItems(){
-    // List<ItemList> itemLists = new ArrayList<>();
-    //itemLists.add(new ItemList("Rosas","Naturales y preciosas",R.drawable.flor));
-    //return itemLists;
-
-    //}
 }
