@@ -22,6 +22,7 @@ public class PaginaInicio extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Button btnCatalogo;
+        Button btnWhats;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagina_inicio);
         btnCerrar = findViewById(R.id.btnCerrar);
@@ -44,6 +45,17 @@ public class PaginaInicio extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Intent i = new Intent(PaginaInicio.this, naturalartificial.class);
+                    startActivity(i);
+
+                }
+            });
+        }
+        btnWhats = (Button) findViewById(R.id.btnWhats);
+        {
+            btnWhats.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(PaginaInicio.this, whatsaap.class);
                     startActivity(i);
 
                 }
